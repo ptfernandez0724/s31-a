@@ -32,14 +32,14 @@ module.exports.updateTask = (taskId, newContent) => {
 			return false;
 		}
 
-		// results of the findById method will be stored in the "result" parameter
+		
 		result.status = newContent.status;
 		return result.save().then((updatedTask, saveErr) => {
 			if(saveErr){
 				console.log(saveErr)
 				return false;
 			} else {
-				// update successful, returns the updated task object back to the client
+				
 				return updatedTask;
 			}
 		})
