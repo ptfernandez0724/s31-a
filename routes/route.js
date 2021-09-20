@@ -19,7 +19,7 @@ router.post('/', (req, res) => {
 })
 
 
-router.put('/:id', (req, res) => {
+router.put('/:id/complete', (req, res) => {
 	controller.updateTask(req.params.id, req.body).then(result => res.send(result));
 })
 
